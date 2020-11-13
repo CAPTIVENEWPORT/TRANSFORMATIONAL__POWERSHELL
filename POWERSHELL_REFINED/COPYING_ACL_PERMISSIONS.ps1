@@ -1,0 +1,2 @@
+﻿Get-Acl -Path "C:\Users\UTLUSR\CAPTIVE_DEV\POWERSHELL_REFINED\ACL_OUTPUT.LOG" | Set-Acl -Path "C:\USERS\UTLUSR\CAPTIVE_DEV\POWERSHELL_REFINED\ACL_OUTPUT1.LOG"
+(Get-Acl -Path "C:\USERS\UTLUSR\CAPTIVE_DEV\POWERSHELL_REFINED\ACL_OUTPUT1.LOG").Access | Format-List *,IdentityReference,FileSystemRights,AccessControlType,IsInherited,InheritanceFlags -Expand Both -Force
